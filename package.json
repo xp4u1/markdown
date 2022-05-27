@@ -1,0 +1,21 @@
+{
+  "name": "markdown",
+  "version": "1.0.0",
+  "description": "Markdown preview",
+  "repository": "https://github.com/xp4u1/markdown",
+  "license": "AGPL",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && yarn html-minifier -c minify.config.json -o dist/index.html dist/index.html",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "katex": "^0.15.6",
+    "showdown": "^2.1.0"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "vite": "^2.9.9"
+  }
+}

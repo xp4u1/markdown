@@ -1,0 +1,211 @@
+body {
+  background-color: #f7f7f7;
+  font-family: Inter, "Apple Color Emoji", -apple-system,
+    BlinkMacSystemFont, HelveticaNeue, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-variant-ligatures: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  transition: opacity 200ms ease-out 0s;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.previewWrapper {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.preview {
+  max-width: 740px;
+  width: 100%;
+  padding: 50px 17px 50px 30px;
+}
+.previewBase {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: #0000001a 0px 0px 10px;
+}
+.card .spacing {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.card p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.card hr {
+  border: 1px solid #dddde7;
+}
+.card code {
+  font-family: "Iosevka Web", monospace;
+}
+.card a {
+  color: #1f24ee;
+}
+
+.editorWrapper {
+  padding: 80px 30px 0px 80px;
+}
+.editor {
+  max-width: 525px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: static;
+}
+.editor .row {
+  position: relative;
+  padding-bottom: 13px;
+}
+.editor .label {
+  position: absolute;
+  left: -120px;
+  top: 0px;
+  width: 100px;
+  text-align: right;
+}
+.editor .label label {
+  font-family: "Iosevka Web", monospace;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #141415;
+  opacity: 0.3;
+  cursor: default;
+  user-select: none;
+}
+.editor .inputContainer {
+  width: 100%;
+}
+.editor .input {
+  width: 100%;
+  outline: none;
+  /* white-space: pre-wrap; */
+  overflow-wrap: break-word;
+  font-family: "Iosevka Web";
+  line-height: 1.8;
+  font-size: 15px;
+  caret-color: #1f24ee;
+  color: #141415;
+  min-height: 100px;
+  background-color: transparent;
+  tab-size: 4;
+  margin: 0;
+  border: none;
+  resize: none;
+}
+
+#warning {
+  display: none;
+}
+
+.darkmode {
+  float: right;
+  padding: 1em;
+  min-width: 30px;
+  position: relative;
+  transition: opacity 200ms ease-out 0s;
+}
+.darkmode #darkmodeToggle {
+  display: none;
+  box-sizing: border-box;
+}
+.darkmode img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  margin: 0 7px;
+  transition: opacity 0.1s ease;
+}
+.darkmode label.light {
+  opacity: 0;
+}
+.darkmode label.dark {
+  opacity: 1;
+}
+
+@media (max-width: 1151px) {
+  #warning {
+    display: unset;
+  }
+  .row {
+    opacity: 0;
+  }
+  .darkmode {
+    opacity: 0;
+  }
+}
+@media (min-width: 1152px) {
+  .card .spacing {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .editorWrapper {
+    padding-left: 90px;
+    padding-right: 60px;
+  }
+}
+@media (min-width: 1280px) {
+  .editorWrapper {
+    padding-left: 90px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .card .spacing {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .editorWrapper {
+    padding-left: 120px;
+  }
+}
+@media (min-width: 1680px) {
+  .editorWrapper {
+    padding-left: 120px;
+  }
+}
+
+body.dark {
+  background-color: #1b1c1d !important;
+  color: #d1d3d6 !important;
+}
+body.dark .card {
+  background-color: #232427 !important;
+  box-shadow: #0000001a 0px 0px 10px !important;
+}
+body.dark .card a {
+  color: #6d6bff;
+}
+body.dark .input {
+  color: #e1e3e6 !important;
+  caret-color: #6d6bff;
+}
+body.dark label {
+  color: #e1e3e6 !important;
+}
+body.dark .darkmode label.light {
+  opacity: 1 !important;
+}
+body.dark .darkmode label.dark {
+  opacity: 0 !important;
+}

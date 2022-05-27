@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown</title>
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://paul.hoerenz.com/cdn/fonts/inter/inter.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://paul.hoerenz.com/cdn/fonts/iosevka/iosevka.css"
+    />
+  </head>
+  <body>
+    <p id="warning">
+      Bitte öffne die Seite an einem Computer und/oder auf einem größerem
+      Bildschirm.
+    </p>
+
+    <div class="darkmode">
+      <input type="checkbox" id="darkmodeToggle" />
+      <label for="darkmodeToggle" class="light">
+        <img src="./src/moon.svg" />
+      </label>
+      <label for="darkmodeToggle" class="dark">
+        <img src="./src/sun.svg" />
+      </label>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="previewWrapper">
+          <div class="preview">
+            <div class="previewBase">
+              <div class="card">
+                <div id="content" class="spacing">
+                  <noscript>
+                    <p>
+                      <strong
+                        >Diese Seite benötigt JavaScript, um Markdown
+                        Client-seitig übersetzen zu können.</strong
+                      >
+                      Deine eingegeben Texte sind dadurch ausschließlich für
+                      dich sichtbar und werden nicht über das Internet
+                      versendet.
+                    </p>
+                  </noscript>
+                  <p>Inhalt wird geladen...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="editorWrapper">
+          <div class="editor">
+            <div class="row">
+              <div class="label">
+                <label for="editor">Markdown</label>
+              </div>
+              <div class="inputContainer">
+                <div
+                  id="markdownInput"
+                  class="input"
+                  role="textbox"
+                  contenteditable="true"
+                >
+                  # 🪴 Markdown-Vorschau<br /><br />Hallo Besucher,<br /><br />mithilfe
+                  dieser Website kannst du Markdown-Texte in einem einfach
+                  lesbaren Format anzeigen lassen. Diese Vorschau unterstützt
+                  allerlei Funktionen.<br /><br />*Falls du einen Text
+                  zugesendet haben solltest, kannst du ihn auf der rechten Seite
+                  in das Textfeld einfügen.*<br /><br />## Funktionen<br />
+                  <div><br /></div>
+                  <div>
+                    Mit Markdown kann man schnell mit Sonderzeichen Text
+                    *kursiv* oder **fett** machen, ohne auch nur die Hand von
+                    der Tastatur zur Maus bewegen zu müssen. Wenn du mehr
+                    darüber erfahren und die vielen weiteren Funtionen von
+                    Markdown kennenlernen möchtest, ist [diese
+                    Seite](https://www.markdownguide.org/cheat-sheet) eine tolle
+                    Hilfe.<br />
+                  </div>
+                  <div><br /></div>
+                  Mithilfe von LaTeX kann man schnell mathematische Formeln
+                  austauschen.<br /><br />$$e = 1 + \frac{1}{1} + \frac{1}{1
+                  \cdot 2} + \frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2
+                  \cdot 3 \cdot 4}&nbsp; + \dots = \sum^\infty_{k=0}
+                  \frac{1}{k!}$$<br /><br />Chemische Gleichungen lassen sich
+                  mit `mchem` blitzschnell schreiben und versenden.<br /><br />$$\ce{H2O
+                  + H2O &lt;=&gt; H3O+ + OH-}$$<br /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
